@@ -20,10 +20,18 @@ const RichCardNode = ({ id, data }: any) => {
       <Button
         variant="default"
         className="w-full bg-black text-white text-sm flex items-center justify-center rounded-t-lg rounded-b-none"
-        onClick={() => {data.onAddCarousel(id, selectedElements),setSelectedElements([])}}
+        onClick={() => {
+          if (selectedElements.length === 0) {
+            alert("Please select at least one element before adding to flow.");
+            return;
+          }
+          data.onAddCarousel(id, selectedElements);
+          setSelectedElements([]); // Reset selection after adding
+        }}
       >
         + Add to Flow
       </Button>
+
 
       <div className="bg-white border  shadow-md p-3">
         {/* Chips Section */}
