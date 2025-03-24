@@ -31,6 +31,7 @@ const FlowCanvas = () => {
 
 
 function handleAddCarousel(sourceId: string, selectedElements: string[]) {
+   console.log(sourceId);
     setNodes((nds): any => {
       const lastCarousel = nds.filter((n) => n.type === 'carouselCard').pop();
       
