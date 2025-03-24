@@ -1,12 +1,12 @@
-import TestShadcn from "@/components/TestShadcn";
+import React from 'react';
+import Flow from './components/Flow';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">shadcn UI Setup Test</h1>
-      <TestShadcn />
+    <div className="App">
+      <Flow />
     </div>
   );
-}
+};
 
 export default App;
