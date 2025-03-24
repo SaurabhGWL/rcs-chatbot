@@ -54,7 +54,7 @@ function handleAddCarousel(sourceId: string, selectedElements: string[]) {
       return [...nds, newNode];
     });
   }
- console.log('check node', nodes);
+
   return (
     <div className="w-screen h-screen">
       <ReactFlow
